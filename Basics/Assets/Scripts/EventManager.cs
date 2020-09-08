@@ -31,7 +31,10 @@ public static class EventManager
 
     public static void RaiseEvent(EventType type)
     {
-        eventDictionary[type]?.Invoke();
+        if(eventDictionary.ContainsKey(type))
+        {
+            eventDictionary[type].Invoke();
+        }
     }
 }
 
@@ -58,7 +61,10 @@ public static class EventManager<T>
 
     public static void RaiseEvent(EventType type, T arg1)
     {
-        eventDictionary[type]?.Invoke(arg1);
+        if (eventDictionary.ContainsKey(type))
+        {
+            eventDictionary[type]?.Invoke(arg1);
+        }
     }
 }
 

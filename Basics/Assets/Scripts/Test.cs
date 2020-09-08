@@ -13,6 +13,8 @@ public class Test : MonoBehaviour
 
     public void Start()
     {
+        DecoratorTest test = new DecoratorTest();
+        test.Setup();
         //SomeClass.OnGameStart += SpawnOrc;
         //AddEnemiesToWave(3, SpawnOrc); 
         //AddEnemiesToWave(5, SpawnGoblin);
