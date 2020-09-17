@@ -90,3 +90,17 @@ public class Spell : ISpell
         Debug.Log("Do the damage: " + Damage + " " + SpellTypes);
     }
 }
+
+
+
+// Fire     0001
+// Ice      0010
+// Poison   0100
+
+//SpellType type = SpellTypes.Fire;
+//type |= SpellType.Ice;
+//type &= ~SpellType.Ice
+//    0011
+//    1101
+//    0001
+//~SpellType.Ice
